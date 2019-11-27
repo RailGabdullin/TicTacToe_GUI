@@ -26,12 +26,12 @@ public class ButtonsPane extends JPanel {
      * Также цикл навешивает на кнопки слушатель, который позволяет реализовать
      * игру за человека. Слушатель проверяет доступность кнопки, и, если она доступна, то обновляет поле передавая в метод
      * updateGameBoard() символ текущего игрока и номер выбранной им кнопки.
-     * @param game - ссылка на текущий объект игры Game
+     * @param _game - ссылка на текущий объект игры Game
      * @param gameBoard - ссылка на текущее игровое окно gameBoard
      * @param mapSize - размер игрового поля
      */
-    ButtonsPane(Game game, GameBoard gameBoard, int mapSize){
-        this.game = game;
+    ButtonsPane(Game _game, GameBoard gameBoard, int mapSize){
+        this.game = _game;
         this.gameBoard = gameBoard;
         this.mapSize = mapSize;
 

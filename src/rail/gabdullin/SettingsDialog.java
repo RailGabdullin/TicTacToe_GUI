@@ -50,13 +50,13 @@ class SettingsDialog extends JDialog {
 
         //Имя первого игрока
         settingsPane.add(new JLabel("Имя первого игрока"));
-        JTextField firstPlayerName = new JTextField("Человек");
+        JTextField firstPlayerName = new JTextField(players[0].getName());
         firstPlayerName.setPreferredSize(new Dimension(300, 30));
         settingsPane.add(firstPlayerName);
 
         //Имя второго игрока
         settingsPane.add(new JLabel("Имя второго игрока"));
-        JTextField secondPlayerName = new JTextField("Компьютер");
+        JTextField secondPlayerName = new JTextField(players[1].getName());
         secondPlayerName.setPreferredSize(new Dimension(300, 30));
         settingsPane.add(secondPlayerName);
 
@@ -93,7 +93,7 @@ class SettingsDialog extends JDialog {
 
         //Размер поля
         settingsPane.add(new JLabel("Размер поля"));
-        SpinnerModel mapSizeModel = new SpinnerNumberModel(3,1,20,1);
+        SpinnerModel mapSizeModel = new SpinnerNumberModel(gameBoard.getMapSize(),1,20,1);
         JSpinner mapSize = new JSpinner(mapSizeModel);
         settingsPane.add(mapSize);
 

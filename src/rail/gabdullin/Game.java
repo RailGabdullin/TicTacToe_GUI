@@ -30,8 +30,9 @@ public class Game {
         players[0] = new Player(firstPlayerSymbol);
         players[1] = new PlayerAI(secondPlayerSymbol, this);
         gameBoard = new GameBoard(this);
-        new SettingsDialog(getGameBoard(), this, getPlayers());
         dropCoin();
+        new SettingsDialog(getGameBoard(), this, getPlayers());
+        nextStep();
     }
 
     /**

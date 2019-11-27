@@ -36,7 +36,7 @@ class SettingsDialog extends JDialog {
         this.players[1] = players[1];
 
         //Устанавливаем настройки окна
-        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(closingOfWidow());
         setLocation(350,250);
         setPreferredSize(new Dimension(300,300));
 
@@ -118,6 +118,11 @@ class SettingsDialog extends JDialog {
 
         pack();
         setVisible(true);
+    }
+
+    private int closingOfWidow(){
+        game.refreshGame();
+        return 2;
     }
 
 }
